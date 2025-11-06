@@ -1,10 +1,10 @@
 def syracuse(p):
     pass 
 
-    suite = []
+    suite = [p]
     if p <= 0: 
         print("Le nombre doit être strictement positif")
-        return
+        return None, None, None
     if p % 2 == 0:
         p = p / 2
         suite.append(p)
@@ -12,6 +12,10 @@ def syracuse(p):
         p = 3 * p + 1
         suite.append(p) 
     
+    tv = len(suite) - 1
+    tva = suite.index(max(suite))
+    am = max(suite)
+    return tv, tva, am
 
 
 def main():
