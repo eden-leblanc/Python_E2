@@ -4,12 +4,13 @@ from math import sqrt
 
 
 def isprime(n):
-    res = True
+    if n < 2 :
+        return False
     for i in range (2, int(sqrt(n)) + 1):
         if n % i == 0:
-            res = False
+            return False
             break
-    return res
+    return True
     pass
 
 #### Fonction principale
